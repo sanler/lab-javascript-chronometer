@@ -8,12 +8,14 @@ this.intervalId=0;
 
  Chronometer.prototype.startClick = function () {
 
-var incrementarSegundos=function(segundos){
+    var segs=this;
 
-    segundos++;
-console.log(this.currentTime);
-};
-    this.intervalId=setInterval(incrementarSegundos(this.currentTime), 1000);
+    this.intervalId=setInterval(function(){
+
+     
+    segs.currentTime++;
+    
+    }, 1000);
      
       
  };
